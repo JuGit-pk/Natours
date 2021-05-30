@@ -8,6 +8,7 @@
     display: inline-block;
     transition: all 0.2s;
     position: relative;
+    font-size: 1.6rem;
   }
   &:hover {
     transform: translateY(-3px);
@@ -36,11 +37,19 @@
   }
 
   &--white {
-    color: $color-light-grey;
+    color: $color-grey-dark;
     background-color: $color-white;
 
     &::after {
       background-color: $color-white;
+    }
+  }
+  &--green {
+    color: $color-grey-light-1;
+    background-color: $color-primary;
+
+    &::after {
+      background-color: $color-primary;
     }
   }
   &--animated {
