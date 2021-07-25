@@ -6,13 +6,32 @@
   box-sizing: inherit;
 }
 html {
-  font-size: 62.5%;
+  // Definition of what 1 rem is
+
+  font-size: 62.5%; // 1rem = 10px where, 10/16 is 62.5%
+
+  @include respond(big-desktop) {
+    // min-width 1800px
+    // 1rem = 12px where, 12/16 is 75%
+    font-size: 75%;
+  }
+  @include respond(tab-land) {
+    // max-width 1200px
+    // 1rem = 9px where, 9/16 is 56.25%
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    //max-width 900px
+    // 1rem = 8px where, 8/16 is 50%
+    font-size: 50%;
+  }
 }
+
 body {
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  padding: 3rem;
   box-sizing: border-box;
-  color: $color-grey-dark;
-  line-height: 1.7;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
